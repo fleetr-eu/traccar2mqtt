@@ -19,9 +19,15 @@ app.get('/gprmc', function(req, res) {
     "course": parseFloat(q.course),
     "speed": parseFloat(q.speed),
     "recordTime": new Date(parseInt(q.deviceTime)).toISOString()
+    "interval": 50,
+    "speed2": 0,
+    "tacho": 0,
+    "fuelc": 0,
+    "fuell": 0,
+    "distance": 0
   };
   client.publish('/fleetr/records', JSON.stringify(rec), function(err) {
-    if(err) {
+    if (err) {
       console.error(err);
     } else {
       console.log('MQTT message sent.');
