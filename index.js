@@ -13,6 +13,7 @@ app.get('/gprmc', function(req, res) {
   console.log(q);
   rec = {
     "deviceId": parseInt(q.id),
+    "type": 30,
     "lat": parseFloat(q.latitude),
     "lon": parseFloat(q.longitude),
     "course": parseFloat(q.course),
