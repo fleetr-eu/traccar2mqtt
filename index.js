@@ -2,11 +2,11 @@ var express = require('express');
 var app = express();
 
 var mqtt = require('mqtt');
-var client = mqtt.connect('mqtt://gps.kale-bg.com:10013');
-
-client.on('connect', function() {
-  console.log('Connected to gps.kale-bg.com:10013');
-});
+// var client = mqtt.connect('mqtt://gps.kale-bg.com:10013');
+//
+// client.on('connect', function() {
+//   console.log('Connected to gps.kale-bg.com:10013');
+// });
 
 app.get('/gprmc', function(req, res) {
   q = req.query
@@ -21,13 +21,14 @@ app.get('/gprmc', function(req, res) {
     "recordTime": new Date(parseInt(q.deviceTime)).toISOString(),
     "offset": q.deviceTime
   };
-  client.publish('/fleetr/records', JSON.stringify(rec), function(err) {
-    if (err) {
-      console.error(err);
-    } else {
-      console.log('MQTT message sent.');
-    }
-  });
+  console.log('Query: ', q);
+  // client.publish('/fleetr/records', JSON.stringify(rec), function(err) {
+  //   if (err) {
+  //     console.error(err);
+  //   } else {
+  //     console.log('MQTT message sent.');
+  //   }
+  // });
   res.send('Done!');
 });
 
