@@ -1,21 +1,22 @@
 {
   "name": "gprmc-srv",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/greyarch/traccar2mqtt.git"
+    "url": "git+https://github.com/fleetr-eu/traccar2mqtt.git"
   },
   "author": "Gantcho Kojuharov <gantcho@greyarch.net> (http://greyarch.net)",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/greyarch/traccar2mqtt/issues"
+    "url": "https://github.com/fleetr-eu/traccar2mqtt/issues"
   },
-  "homepage": "https://github.com/greyarch/traccar2mqtt#readme",
+  "homepage": "https://github.com/fleetr-eu/traccar2mqtt#readme",
   "dependencies": {
     "express": "^4.13.4",
     "mqtt": "^1.7.3"
