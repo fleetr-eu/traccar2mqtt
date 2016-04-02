@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon index.js"
+    "start": "nodemon index.coffee"
   },
   "repository": {
     "type": "git",
@@ -19,6 +19,7 @@
   "homepage": "https://github.com/fleetr-eu/traccar2mqtt#readme",
   "dependencies": {
     "express": "^4.13.4",
-    "mqtt": "^1.7.3"
+    "mqtt": "^1.7.3",
+    "nedb": "^1.8.0"
   }
 }
