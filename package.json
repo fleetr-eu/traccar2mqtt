@@ -1,11 +1,11 @@
 {
   "name": "traccar2mqtt",
-  "version": "2.0.0",
-  "description": "",
-  "main": "index.coffee",
+  "version": "3.0.0",
+  "description": "Traccar (HTTP) to MQTT bridge for Fleetr",
+  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon index.coffee"
+    "dev": "micro-dev",
+    "start": "micro --listen tcp://localhost:80"
   },
   "repository": {
     "type": "git",
@@ -18,9 +18,10 @@
   },
   "homepage": "https://github.com/fleetr-eu/traccar2mqtt#readme",
   "dependencies": {
-    "coffee-script": "^1.10.0",
-    "express": "^4.13.4",
-    "mqtt": "^1.7.3",
-    "nedb": "^1.8.0"
+    "micro": "^9.3.3",
+    "mqtt": "^2.18.8"
+  },
+  "devDependencies": {
+    "micro-dev": "^3.0.0"
   }
 }
