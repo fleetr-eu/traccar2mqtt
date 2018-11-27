@@ -13,7 +13,7 @@ module.exports = async req => {
     const {position, device} = await json(req);
     const data = {
       name: device.name,
-      deviceId: device.uniqueId,
+      deviceId: parseInt(device.uniqueId),
       traccarId: device.id,
       protocol: position.protocol,
       recordTime: {"$date": position.deviceTime},
