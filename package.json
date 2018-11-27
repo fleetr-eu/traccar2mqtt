@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "micro-dev",
-    "start": "micro --listen tcp://localhost:80"
+    "start": "micro"
   },
   "repository": {
     "type": "git",
